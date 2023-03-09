@@ -101,6 +101,15 @@ public class RadioTest {
     }
 
     @Test
+    public void setNewRadioStationWhenTheValuesAreLessThan0() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStationNumber(-16);
+        int expected = 0;
+        int actual = radio.getCurrentRadioStationNumber();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void increaseSoundVolumeWhenTheValueAre0() {
         Radio radio = new Radio();
         radio.setCurrentSoundVolume(0);
@@ -192,6 +201,15 @@ public class RadioTest {
     public void setNewCurrentSoundVolumeWhenTheValueGreaterThan10() {
         Radio radio = new Radio();
         radio.setCurrentSoundVolume(12);
+        int expected = 0;
+        int actual = radio.getCurrentSoundVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setNewCurrentSoundVolumeWhenTheValuesAreLessThan0() {
+        Radio radio = new Radio();
+        radio.setCurrentSoundVolume(-6);
         int expected = 0;
         int actual = radio.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
