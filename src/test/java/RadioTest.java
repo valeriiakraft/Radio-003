@@ -41,7 +41,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextRadioStationWithConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void nextRadioStationWithConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio(15);
         radio.setCurrentRadioStationNumber(10);
         radio.nextRadioStation();
@@ -51,7 +51,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextRadioStationWithoutConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void nextRadioStationWithoutConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationNumber(4);
         radio.nextRadioStation();
@@ -102,7 +102,7 @@ public class RadioTest {
     }
 
     @Test
-    public void prevRadioStationWithConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void prevRadioStationWithConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio(15);
         radio.setCurrentRadioStationNumber(8);
         radio.prevRadioStation();
@@ -112,7 +112,7 @@ public class RadioTest {
     }
 
     @Test
-    public void prevRadioStationWithoutConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void prevRadioStationWithoutConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationNumber(6);
         radio.prevRadioStation();
@@ -157,7 +157,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void setNewRadioStationWithConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio(40);
         radio.setCurrentRadioStationNumber(15);
         int expected = 15;
@@ -166,7 +166,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithoutConstructorParametersWhenTheValuesAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
+    public void setNewRadioStationWithoutConstructorParametersWhenTheValueAreGreaterThanMinRadioStationNumberAndLessThanMaxRadioStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationNumber(8);
         int expected = 8;
@@ -175,7 +175,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithConstructorParametersWhenTheValuesAreGreaterThanMaxRadioStationNumber() {
+    public void setNewRadioStationWithConstructorParametersWhenTheValueAreGreaterThanMaxRadioStationNumber() {
         Radio radio = new Radio(17);
         radio.setCurrentRadioStationNumber(19);
         int expected = 0;
@@ -184,7 +184,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithoutConstructorParametersWhenTheValuesAreGreaterThanMaxRadioStationNumber() {
+    public void setNewRadioStationWithoutConstructorParametersWhenTheValueAreGreaterThanMaxRadioStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationNumber(13);
         int expected = 0;
@@ -193,7 +193,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithConstructorParametersWhenTheValuesAreLessThanMinRadioStationNumber() {
+    public void setNewRadioStationWithConstructorParametersWhenTheValueAreLessThanMinRadioStationNumber() {
         Radio radio = new Radio(12);
         radio.setCurrentRadioStationNumber(-6);
         int expected = 0;
@@ -202,7 +202,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewRadioStationWithoutConstructorParametersWhenTheValuesAreLessThanMinRadioStationNumber() {
+    public void setNewRadioStationWithoutConstructorParametersWhenTheValueAreLessThanMinRadioStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationNumber(-4);
         int expected = 0;
@@ -262,7 +262,7 @@ public class RadioTest {
     }
 
     @Test
-    public void decreaseSoundVolumeWhenTheValuesAreGreaterThanMinSoundVolumeAndLessThanMaxSoundVolume() {
+    public void decreaseSoundVolumeWhenTheValueAreGreaterThanMinSoundVolumeAndLessThanMaxSoundVolume() {
         Radio radio = new Radio();
         radio.setCurrentSoundVolume(33);
         radio.decreaseSoundVolume();
@@ -290,7 +290,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewCurrentSoundVolumeWhenTheValuesAreGreaterThanMinSoundVolumeAndLessThanMaxSoundVolume() {
+    public void setNewCurrentSoundVolumeWhenTheValueAreGreaterThanMinSoundVolumeAndLessThanMaxSoundVolume() {
         Radio radio = new Radio();
         radio.setCurrentSoundVolume(6);
         int expected = 6;
@@ -308,7 +308,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setNewCurrentSoundVolumeWhenTheValuesAreLessThanMinSoundVolumeAnd() {
+    public void setNewCurrentSoundVolumeWhenTheValueAreLessThanMinSoundVolumeAnd() {
         Radio radio = new Radio();
         radio.setCurrentSoundVolume(-6);
         int expected = 0;
