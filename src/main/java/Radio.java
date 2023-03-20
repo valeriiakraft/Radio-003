@@ -1,10 +1,22 @@
 public class Radio {
     private int currentRadioStationNumber;
     private int currentSoundVolume;
+    private int minRadioStationNumber = 0;
+    private int maxRadioStationNumber;
+    private int maxSoundVolume = 100;
+    private int minSoundVolume = 0;
+
+    public Radio(int numberOfRadioStations) {
+        maxRadioStationNumber = numberOfRadioStations - 1;
+    }
+
+    public Radio() {
+        maxRadioStationNumber = 9;
+    }
 
 
     public void setCurrentRadioStationNumber(int newRadioStationNumber) {
-        if (newRadioStationNumber <= 9) {
+        if (newRadioStationNumber <= maxRadioStationNumber) {
             if (newRadioStationNumber >= 0) {
                 currentRadioStationNumber = newRadioStationNumber;
             }
@@ -17,7 +29,7 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if (currentRadioStationNumber == 9) {
+        if (currentRadioStationNumber == maxRadioStationNumber) {
             currentRadioStationNumber = 0;
         } else {
             currentRadioStationNumber = currentRadioStationNumber + 1;
@@ -26,15 +38,15 @@ public class Radio {
 
     public void prevRadioStation() {
         if (currentRadioStationNumber == 0) {
-            currentRadioStationNumber = 9;
+            currentRadioStationNumber = maxRadioStationNumber;
         } else {
             currentRadioStationNumber = currentRadioStationNumber - 1;
         }
     }
 
     public void setCurrentSoundVolume(int newCurrentSoundVolume) {
-        if (newCurrentSoundVolume <= 10) {
-            if (newCurrentSoundVolume >= 0) {
+        if (newCurrentSoundVolume <= maxSoundVolume) {
+            if (newCurrentSoundVolume >= minSoundVolume) {
                 currentSoundVolume = newCurrentSoundVolume;
             }
         }
@@ -45,16 +57,16 @@ public class Radio {
     }
 
     public void increaseSoundVolume() {
-        if (currentSoundVolume == 10) {
-            currentSoundVolume = 10;
+        if (currentSoundVolume == maxSoundVolume) {
+            currentSoundVolume = maxSoundVolume;
         } else {
             currentSoundVolume = currentSoundVolume + 1;
         }
     }
 
     public void decreaseSoundVolume() {
-        if (currentSoundVolume == 0) {
-            currentSoundVolume = 0;
+        if (currentSoundVolume == minSoundVolume) {
+            currentSoundVolume = minSoundVolume;
         } else {
             currentSoundVolume = currentSoundVolume - 1;
         }
