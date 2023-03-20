@@ -3,13 +3,14 @@ public class Radio {
     private int currentSoundVolume;
     private int minRadioStationNumber = 0;
     private int maxRadioStationNumber;
-    private int maxSoundVolume= 100;
-    private int minSoundVolume= 0;
+    private int maxSoundVolume = 100;
+    private int minSoundVolume = 0;
 
-    public Radio(int numberOfRadioStations){
-   maxRadioStationNumber=numberOfRadioStations-1;
+    public Radio(int numberOfRadioStations) {
+        maxRadioStationNumber = numberOfRadioStations - 1;
     }
-    public Radio(){
+
+    public Radio() {
         maxRadioStationNumber = 9;
     }
 
@@ -28,7 +29,7 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if (currentRadioStationNumber ==  maxRadioStationNumber) {
+        if (currentRadioStationNumber == maxRadioStationNumber) {
             currentRadioStationNumber = 0;
         } else {
             currentRadioStationNumber = currentRadioStationNumber + 1;
@@ -37,7 +38,7 @@ public class Radio {
 
     public void prevRadioStation() {
         if (currentRadioStationNumber == 0) {
-            currentRadioStationNumber =  maxRadioStationNumber;
+            currentRadioStationNumber = maxRadioStationNumber;
         } else {
             currentRadioStationNumber = currentRadioStationNumber - 1;
         }

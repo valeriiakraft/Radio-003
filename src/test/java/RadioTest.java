@@ -147,6 +147,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStationNumber();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void setNewRadioStationWithoutConstructorParametersWhenTheValueAreMinRadioStationNumber() {
         Radio radio = new Radio();
